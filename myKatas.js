@@ -46,12 +46,18 @@ function createPhoneNumber(numbers) {
 
 
 // Unique In Order
-var uniqueInOrder = function(iterable) {
+var uniqueInOrder = function (iterable) {
     let result = []
-    for (let i=0; i<iterable.length; i++){
-        if (iterable[i] != iterable[i+1]){
+    for (let i = 0; i < iterable.length; i++) {
+        if (iterable[i] != iterable[i + 1]) {
             result.push(iterable[i])
         }
     }
     return result
+}
+
+// Sum of positive
+function positiveSum(arr) {
+    arr = arr.filter((a) => a >= 0)
+    return arr.length > 0 ? arr.reduce((a, b) => a + b) : 0
 }
